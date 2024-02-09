@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // try{
+      //      let firstName="Elchin"
+      //     let surName="Abdullayev"
+      //      let fullName=firstName+familyName
+      //     }catch(e){
+      //          console.table(e)
+      // }
+        //Try Yoxluyursan duzdurse isleyir yox eger sehvlik varsa catch da ozunu gosterir
+      let age = prompt("Nece Yasin var?");
+      const testFunction = () => {
+        try {
+          if (age > 29) throw new Error("Senin bir sehvin var");
+          else if (age < 29) throw new Error("Sene Giris olar");
+        } catch {
+          if (age > 29) {
+            alert("Giris Qadagandir");
+          } else if (age < 29) {
+            alert("Giris olar");
+          }
+        }
+      };
+      testFunction();
+    </script>
+  </body>
+</html>

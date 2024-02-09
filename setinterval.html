@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Animasiya ve yaxud API ucun istifade olunur
+      function sayHello() {
+        console.log("hello");
+      }
+      setInterval(sayHello, 2000); //her iki saniyeden bir yazir
+
+      function sayClose() {
+        console.log("close");
+      }
+      setTimeout(sayClose, 2000); //2 saniyeden sonra ancag bir defe yazir
+
+
+      const interval=setInterval(sayHello,2000)
+
+      const timeout=setTimeout(()=>{
+        clearInterval(interval)
+        console.log("5 saniye sonra legv edildi")
+      },5000) //men buna const yazdimki ona uygun kod yazim
+
+      setInterval(()=>{
+        clearTimeout(timeout)
+        console.log("Bu defe Time Out Legv Edildi")
+      },3000) //ve burda yuxardaki kodu dayandirdimki davam elesin
+    </script>
+  </body>
+</html>

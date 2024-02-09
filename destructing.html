@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body oncontextmenu="return false">
+    
+    <script>
+            //Arrayin icindeki melumatlari almag ucun ve yaxuddaki onunda icindeki arrayin objectini almag ucun istifade edilir
+                ///////////////////////////////////////////////////////
+        const numbers=[5,10,15]
+        const [number1,number2,number3]=numbers //eger ikinci yox 1 nen 3 cunu almag isteyiremse : const [number1,,number3]=numbers
+        console.log(number2)
+
+                ///////////////////////////////////////////////////////
+        const names=["Elcin","Tofig","Ali","Rza"]
+        const [firstperson,twoperson]=names
+        console.log(firstperson,twoperson)
+    
+                ///////////////////////////////////////////////////////
+        const stack=[
+            ["HTML","CSS","JS"],
+            ["PYTHON","DJANGO","SQL"]
+        ]
+        const [frontend,[firstpython]]=stack //eger pythonu almag isteyiremse arrayin icinde array
+        console.log(firstpython)
+
+                ///////////////////////////////////////////////////////
+        const regemler=[1,undefined,3]
+        const [regem1,regem2=2,regem3]=regemler
+        console.log(regem2)
+
+                ///////////////////////////////////////////////////////
+        const obj={
+            name:"Elcin",
+            surname:"Abdullayev",
+            pets:{
+                cats:["Mellisa"]
+            }
+        }
+        const {surname:soyad}=obj
+        console.log(soyad)
+
+                ///////////////////////////////////////////////////////
+
+
+        const misallar=[10,15]
+        function multiply(misallar){
+            return misallar[0]*misallar[1]
+        }
+        console.log(multiply(misallar))
+
+                ////////////////////////
+                const user={
+                    name:"Elcin",
+                    surname:"Abdullayev",
+                    pets:{
+                        cats:["Mellisa"]
+                    }
+                }
+                function showUserInfo({name,surname,pets}){
+                        return `${name}${surname}${pets}`
+                }
+                console.log(
+                    showUserInfo(user)
+                )
+                
+    </script>
+</body>
+</html>

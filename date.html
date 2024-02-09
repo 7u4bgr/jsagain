@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Tarixlerin nece istifade olunacagi yazilir
+      const date = new Date();
+      let year = date.getFullYear(),
+        month = date.getMonth(),
+        day = date.getDay();
+
+      let months = [
+        "Yanvar",
+        "Fevral",
+        "Mart",
+        "Aprel",
+        "May",
+        "Iyun",
+        "Iyul",
+        "Avqust",
+        "Sentyabr",
+        "Oktyabr",
+        "Noyabr",
+        "Dekabr",
+      ];
+
+      let days = [
+        "1ci gun",
+        "2ci gun",
+        "3ci gun",
+        "4ci gun",
+        "5ci gun",
+        "6ci gun",
+        "7ci gun",
+      ];
+      let sum = `${months[month]} ${days[day-1]}`;
+      console.log(day);
+    </script>
+  </body>
+</html>

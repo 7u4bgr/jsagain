@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li>item1
+
+          <button class="button">Remove Item</button>
+      </li>
+      <li>item2
+
+          <button class="button">Remove Item</button>
+      </li>
+      <li>item3
+
+          <button class="button">Remove Item</button>
+      </li>
+      <li>item4
+
+          <button class="button">Remove Item</button>
+      </li>
+    </ul>
+    <script>
+      const ul = document.querySelector("ul");
+      const deleteButtons = document.querySelectorAll(".button");
+
+      deleteButtons.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.target.closest("li").remove();
+          if (ul.childElementCount === 0) {
+            //Eger ul-im ici 0 a beraberdise ul i de sil
+            ul.remove();
+            ul.innerHTML="Hecne yoxdur"
+            //ve yaxud ul.innerHTML='Gosterilen hecne qalmadi'
+          }
+        });
+      });
+      //SCROOL
+
+      //scroll.addEventListener("click",e=>{
+      //   scrollContent.scrollTop += 50
+      //})
+    </script>
+  </body>
+</html>

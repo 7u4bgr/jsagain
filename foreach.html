@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Foreach loop metodudur.Yeni For kimi eyni isleyir.
+
+      //Burada arrayin icindeki regemleri toplayir
+      const numbers = [1, 3, 5, 7, 9];
+      let sum = 0;
+      numbers.forEach(function (number) {
+        sum = sum + number;
+      });
+      console.log(sum);
+
+
+      //Burdada arrayin icindekileri toplayir
+      let a = 0;
+      const array = [5, 10, 15, 20];
+      array.forEach(function (regemler) {
+        a = a + regemler;
+      });
+      console.log(a);
+
+
+      //Arrayin icindeki melumatlarin hamsini boyuk yazdirir
+      const modifyArray = ["Finland", "Germany", "Azerbaijan"];
+      modifyArray.forEach(function (element) {
+        console.log(element.toUpperCase());
+      });
+
+
+      //Biz burada IF ile sertimizi yazmisigki,eger user.id 2 ye beraberdise userimin adini deyis rza ele.
+      let users = [
+        {
+          id: 2,
+          name: "Elcin",
+        },
+        {
+          id: 3,
+          name: "Tofig",
+        },
+        {
+          id: 4,
+          name: "Ali",
+        },
+      ];
+      users = users.map((user) => {
+        if (user.id === 2) {
+          user.name = "Rza";
+        }
+        return user
+      });
+      console.log(users)
+    </script>
+  </body>
+</html>

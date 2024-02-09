@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Biz bu metoddan yalniz sira sira islesin deye istifade edirik.Yeni gozle birinci API gelsin sonra Responsu gotur sonra data gelsin sonra datani yazdir
+        //Eger sehvlik olarsa Error yazdir ve o Erroru goster bize
+        const API_URL="https://jsonplaceholder.typicode.com/posts"
+        async function getPosts(){
+            try{
+                const response=await fetch(API_URL) //API den melumat gelir
+                const data=await response.json() //bu dataya catir
+                console.log(data) //ve burda dataya daxil olurug
+            }catch(err){
+                console.log(err)  //error olanda ise error yazilir
+            }
+        }
+        getPosts()
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            //Eger biz bir functionun icinde yazsag anca0g 1 1 1 olacag ancag 2 olanda ve onu return edirik deye her defe +1 coxalir
+        const outFunction=()=>{
+            let sum=0;
+            const up=()=>{
+                sum++
+                return sum
+            }
+            const down=()=>{
+                sum--
+                return sum
+            }
+            return {
+                up,
+                down
+            }
+
+        }
+        let cavab=outFunction()
+        console.log(cavab.up())
+        console.log(cavab.up())
+        console.log(cavab.up())
+        console.log(cavab.down())
+        console.log(cavab.down())
+      
+
+
+
+
+    </script>
+</body>
+</html>

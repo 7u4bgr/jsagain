@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=s, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="range" min="0" max="255" step="1" id="red" />
+    <input type="range" min="0" max="255" step="1" id="green" />
+    <input type="range" min="0" max="255" step="1" id="blue" />
+    <script>
+      const redInput = document.getElementById("red");
+      const greenInput = document.getElementById("green");
+      const blueInput = document.getElementById("blue");
+      redInput.addEventListener("input", (e) => {
+        document.body.style.backgroundColor = `rgb(${e.target.value},${greenInput.value},${blueInput.value})`;
+      });
+      // redInput.addEventListener("input", changeBodyColor);
+      greenInput.addEventListener("input", (e) => {
+        document.body.style.backgroundColor = `rgb(${redInput.value},${e.target.value},${blueInput.value})`;
+      });
+      //greenInput.addEventListener("input", changeBodyColor);
+
+      blueInput.addEventListener("input", (e) => {
+        document.body.style.backgroundColor = `rgb(${redInput.value},${greenInput.value},${e.target.value})`;
+      });
+      //      blueInput.addEventListener("input", changeBodyColor);
+
+      //function changeBodyColor() {
+     //   document.body.style.backgroundColor = `rgb(${redInput.value},${greenInput.value},${blueInput.value})`;
+    //  }    belede yaza bilerik
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body.a{
+            background-color: black;
+        }
+    </style>
+    <script>
+        e.preventDefault() //tikliyanda getmeni dayandirir
+        e.stopPropagation() //opsi tikliyanda yalniz tikladigivi secir
+        const a= window.matchMedia('(max-width:480px)')
+        a.addEventListener("change",mobileHandler())
+        function a(){
+            if(a.match){
+                console.log("Salam")
+            }else{
+                console.log("Sagol")
+            }
+        }
+    </script>
+</body>
+</html>

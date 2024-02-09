@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Classlar esasen objectler ucun istifade olunur ve onlarin melumatlarina catmag ucun CONSTRUCTOR metodunnan istfade olunur
+
+      //Burda neticede Person{elchin abdullayev} cixacag
+      class Person {
+        constructor(firstName, lastName) {
+          this.firstName = firstName;
+          this.lastName = lastName;
+        }
+        
+      }
+      const person = new Person("elchin", "abdullayev");
+      console.log(person);
+
+
+      //Burada neticede hamisi object kimi cixart
+      class Person1 {
+        constructor(firstName, lastName) {
+          this.firstName = firstName;
+          this.lastName = lastName;
+        }
+        getFullName(){
+            return this.firstName + " " + this.lastName
+        }
+      }
+      const person1 = new Person1("elchin", "abdullayev");
+      const person2 = new Person1("tofig", "abdullayev");
+      const person3 = new Person1("ali", "abdullazade");
+      console.log(person1.getFullName(),person2.getFullName(),person3.getFullName());
+
+
+
+      //Burada neticede Baku cixacag
+      class Person2 {
+        constructor(firstName, lastName) {
+          this.firstName = firstName;
+          this.lastName = lastName;
+        }
+        static Baku(){
+            return "Baku"
+        }
+      }
+      console.log(Person2.Baku());
+
+      //Burada neticede vaxt cixacag
+      class Person3 {
+        static getTimesTamp(){
+            return +(new Date())
+        }
+      }
+   
+      console.log(Person3.getTimesTamp());
+
+
+      //Ve biz burada yazirigki Mellim Person1 dir ve constructor vasitesi ile onun lazim olan parametrini (ad soyad yas ve s.) yazirig ve sonra
+      //bir function yaradirigki neyi geri dondersin bize.Ve o bzde gosterirki Person1 yeni Teacher Riyazziyyat dersi kecir.
+      //Ve en sonra ise biz yazirigki mellimin adi soyadi ne olsun ve telebenin adi ve soyadi.
+      class Teacher extends Person1{
+        constructor(firstName, lastName){
+          super(firstName)
+          this.lastName=lastName
+        }
+        teach(){
+          
+          return "Riyaziyyat Oyredilir"
+        }
+      }
+      class Student extends Person1{
+        learn(){
+          return "Derse qulag asilir"
+        }
+      }
+      const teacher1=new Teacher('elchin','abdullayev')
+      const learn1=new Student("tofig,abdullayev")
+      console.log(
+        teacher1.teach()
+      )
+      console.log(
+        learn1.learn()
+      )
+
+
+      
+    </script>
+  </body>
+</html>

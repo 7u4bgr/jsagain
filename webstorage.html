@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Storage iki cur olur: LocalStorage ve SessionStorage
+        //LocalStorage userin brauzerinde ve komputerinde yaddashda saxliyir datalari yeni komputeri sondurub yandirsa yene isleyir
+        //SessionStorage ise brauzerde indi hal hazirda aktifdise ancag orda saxliyir datani,brauzeri baglasa saxlamiyacag artig.
+        //Cokkie ile fergi: Cokkie limitlidir ve maksimum 4-KB e geder yaddas saxliyir ama Web Storage ise 5-MB e geder
+       
+       
+        localStorage.setItem("name","elchin")
+       
+        console.log(
+            //removeItem
+            //clear melumatlari silmek ucun
+            //key(0) ancag keyleri tapmag ucundur valuenu tapmir
+            localStorage.getItem('name')
+        )
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Regex  eger biz inputumuzda soyus ve yaxud her hansisa simvolnu yazmag istemiriyse regex vasitesi ile edirik
+      let pattern = "love";
+      let flag = "gi";
+      let regEx = new RegExp(pattern, flag);
+
+      let word = /gic/i;
+      let comment = prompt("Yazi yazarken diqqetli olun zehmet olmasa");
+
+        if(word.test(comment)){
+            alert("Sensen gic")
+        }
+
+      console.log(word.test(comment));
+    </script>
+  </body>
+</html>

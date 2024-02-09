@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //JSON ile object arasindaki ferg: JSON hemise dirnag icinde key kimi olmalidi ve string olmalidi",
+      let objJSON = `    
+        [
+    
+            
+                {
+                    "name":"Elchin",
+                    "surname":"Abdullayev",
+                    "age":29
+                },
+                {
+                    "name":"Tofig",
+                    "surname":"Abdullayev",
+                    "age":29,
+                    "skills":[
+                        {
+                    "name":"Rza",
+                            "surname":"Mehemmed"
+                        }
+                    ]
+                    
+                }
+        ]`;
+      let user = JSON.parse(objJSON);
+      //TypeOf===Object
+      console.log(user);
+
+      //Eger sehvi yoxlamag isteyirsense:
+
+      try {
+        let user = JSON.parse(objJSON,(key,value)=>{
+            return key==="name"? value.toUpperCase():value //Eger key ada beraberdise onu boyuk yaz
+        });
+        console.log(user);
+      } catch (err) {
+        console.log(err);
+      }
+
+      let stringJSON = [
+        //JSON ile object arasindaki ferg: JSON hemise dirnag icinde key kimi olmalidi ve string olmalidi"
+        {
+          name: "Ali",
+          surname: "Enver",
+          age: 29,
+        },
+        {
+          name: "Resad",
+          surname: "Fati",
+          age: 29,
+          skills: [
+            {
+              name: "Rza",
+              surname: "Mehemmed",
+            },
+          ],
+        },
+      ];
+      let json=JSON.stringify(stringJSON)
+      //Typeof String
+      console.log(json)
+    </script>
+  </body>
+</html>

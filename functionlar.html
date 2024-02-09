@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Function declaration 
+      //Functionlar esasen her hansisa bir emeliyati yerine yetirmek ucun istifade edirik
+      function myFunc() {}
+      myFunc();
+
+      function multiply(num1, num2) {
+        return num1 + num2;
+      }
+      let sum = multiply(10, 2);
+      console.log(sum);
+
+
+      function sumArray(array) {
+        let sum = 0
+        for (let i = 0; i < array.length; i++) {
+          sum += array[i];
+        }
+        return sum
+      }
+      let massiv = [2, 4, 6, 8, 10];
+      console.log(sumArray(massiv));
+
+        //REST
+      const rest=(num1,num2,...numbers)=>{
+                console.log(num1)
+                console.log(num2)
+                console.log(numbers)
+      }
+      rest(2,3,4,5,6,7,8)
+
+
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>

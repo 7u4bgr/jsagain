@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+    //  const test = (callback) => {
+     //   setTimeout(() => {
+       //   callback("sehv bas verdi", []);
+        //}, 2000);
+      //};
+
+//      const callback = (err, data) => {
+  //      if (err) {
+    //      console.log("Hata olustu", err);
+      //  } else {
+        //  console.log("Hecne olmadi", data);
+    //    }
+     // };
+      //test(callback);
+
+        //Promise en cox async funsiyonunu asantlasdirmag ucun istifade olunur
+      const promise=new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve("Emeliyyat ugurlar bas verdi")
+        },2000)
+      })
+
+      promise.then((data)=>{
+        console.log(data)
+      }).catch(err=>{
+        console.warn(err)
+      })
+    </script>
+  </body>
+</html>

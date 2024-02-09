@@ -1,0 +1,22 @@
+    
+    [
+
+        "//JSON ile object arasindaki ferg: JSON hemise dirnag icinde key kimi olmalidi ve string olmalidi",
+            {
+                "name":"Elchin",
+                "surname":"Abdullayev",
+                "age":29
+            },
+            {
+                "name":"Tofig",
+                "surname":"Abdullayev",
+                "age":29,
+                "skills":[
+                    {
+                "name":"Rza",
+                        "surname":"Mehemmed"
+                    }
+                ]
+                
+            }
+    ]
